@@ -10,11 +10,7 @@ The signature look: a dark, modern UI mockup the "camera" **zooms and pans** acr
 
 *From a real build: a typed prompt → **Send** → the reply **decrypts in place** (ciphertext → plaintext) with live attestation.*
 
-| Intro | Five primitives (3D lift) | Decrypt | Mirror proof |
-|:---:|:---:|:---:|:---:|
-| ![](docs/02-cards.jpg) | ![](docs/03-decrypt.jpg) | ![](docs/04-proof.jpg) |
-
-> Example output: a 2K, ~2:40 explainer for *Mirror Security* — voiceover + background music + time-synced sound effects.
+> Example output: a 2K, ~2:40 explainer for *SAAS Company* — voiceover + background music + time-synced sound effects.
 
 ## What you get
 - A self-contained animated **HTML** explainer (plays in any browser)
