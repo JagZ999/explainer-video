@@ -12,7 +12,7 @@ description: >-
   demo into a video", "create a narrated walkthrough", "product launch video".
 ---
 
-# Explainer Studio
+# Explainer Video
 
 Build a polished, animated **product explainer video** from screenshots and/or a screen recording. The signature look: a dark, modern SVG/HTML UI mockup that the "camera" **zooms and pans** across, with **3D lift** effects on elements as they're named, **ciphertext→plaintext morph** reveals, a typed-prompt → click → result flow, plus **voiceover, background music, and time-synced sound effects**.
 

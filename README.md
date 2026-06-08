@@ -1,8 +1,20 @@
-# Explainer Studio
+# Explainer Video
 
 A **Claude Code skill + plugin** that turns product screenshots or a screen recording into an animated, camera-zooming **explainer video** — with **voiceover, background music, and time-synced sound effects**. It's interactive: Claude interviews you about design and voice, then builds everything.
 
 The signature look: a dark, modern UI mockup the "camera" **zooms and pans** across, with **3D lifts** on elements as they're named, **ciphertext→plaintext morph** reveals, a **typed-prompt → click → result** flow, and synced **VO / music / SFX**.
+
+## Demo
+
+![Explainer Video demo](docs/demo.gif)
+
+*From a real build: a typed prompt → **Send** → the reply **decrypts in place** (ciphertext → plaintext) with live attestation.*
+
+| Intro | Five primitives (3D lift) | Decrypt | Mirror proof |
+|:---:|:---:|:---:|:---:|
+| ![](docs/01-intro.jpg) | ![](docs/02-cards.jpg) | ![](docs/03-decrypt.jpg) | ![](docs/04-proof.jpg) |
+
+> Example output: a 2K, ~2:40 explainer for *Mirror Security* — voiceover + background music + time-synced sound effects.
 
 ## What you get
 - A self-contained animated **HTML** explainer (plays in any browser)

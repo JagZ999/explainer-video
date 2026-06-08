@@ -1,4 +1,4 @@
-// Render an Explainer Studio HTML at native resolution via fast CDP screencast,
+// Render an Explainer Video HTML at native resolution via fast CDP screencast,
 // logging the player's logical time (t) so each frame is remapped to it →
 // high fps AND perfect audio sync (no upscale blur, no wall-clock drift).
 //

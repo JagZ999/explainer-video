@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ElevenLabs helpers for Explainer Studio.
+ElevenLabs helpers for Explainer Video.
 
 Reads the API key from $ELEVENLABS_API_KEY or a .env file in the current dir.
 
