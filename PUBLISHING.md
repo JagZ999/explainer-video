@@ -10,7 +10,7 @@ If you don't have one: https://github.com/signup
 - **Repository name:** `explainer-video`
 - Keep it **Public** (so others can `/plugin marketplace add` it). You can choose Private if you prefer.
 - **Do NOT** check "Add a README / .gitignore / license" (this repo already has them).
-- Click **Create repository**. Leave that page open — it shows your repo URL, e.g. `https://github.com/JagZ/explainer-video.git`.
+- Click **Create repository**. Leave that page open — it shows your repo URL, e.g. `https://github.com/JagZ999/explainer-video.git`.
 
 ## 3. Personalize before pushing
 Edit these and replace the placeholders:
@@ -20,7 +20,7 @@ Edit these and replace the placeholders:
 ## 4. Connect this folder to your repo and push
 From inside this `explainer-video/` folder, run (replace `JagZ`):
 ```bash
-git remote add origin https://github.com/JagZ/explainer-video.git
+git remote add origin https://github.com/JagZ999/explainer-video.git
 git branch -M main
 git push -u origin main
 ```
@@ -36,7 +36,7 @@ https://github.com/settings/tokens — not your account password.)
 ## 5. Tell people how to use it
 Once pushed, anyone can install it in Claude Code:
 ```
-/plugin marketplace add JagZ/explainer-video
+/plugin marketplace add JagZ999/explainer-video
 /plugin install explainer-video@explainer-video
 /explainer
 ```

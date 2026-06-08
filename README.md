@@ -21,7 +21,7 @@ The signature look: a dark, modern UI mockup the "camera" **zooms and pans** acr
 ### Option A — as a plugin (recommended)
 In Claude Code:
 ```
-/plugin marketplace add JagZ/explainer-video
+/plugin marketplace add JagZ999/explainer-video
 /plugin install explainer-video@explainer-video
 ```
 Then run the slash command:
@@ -31,7 +31,7 @@ Then run the slash command:
 
 ### Option B — manual skill install
 ```
-git clone https://github.com/JagZ/explainer-video
+git clone https://github.com/JagZ999/explainer-video
 cp -r explainer-video/skills/explainer-video ~/.claude/skills/
 ```
 Then just tell Claude: *"make an explainer video for my product."*
