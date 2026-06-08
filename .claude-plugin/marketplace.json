@@ -1,0 +1,11 @@
+{
+  "name": "explainer-video",
+  "owner": { "name": "JagZ" },
+  "plugins": [
+    {
+      "name": "explainer-video",
+      "source": "./",
+      "description": "Animated product explainer videos with voiceover, music, and synced sound effects (interactive)."
+    }
+  ]
+}

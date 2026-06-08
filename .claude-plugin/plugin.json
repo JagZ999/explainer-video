@@ -1,0 +1,7 @@
+{
+  "name": "explainer-video",
+  "version": "1.0.0",
+  "description": "Create animated, camera-zooming product explainer videos with voiceover, music, and synced sound effects. Interactive: asks about design, scenes, and TTS provider, then builds an HTML explainer, renders it to MP4, and produces separate music & SFX stems.",
+  "author": { "name": "JagZ" },
+  "keywords": ["explainer", "video", "animation", "voiceover", "elevenlabs", "marketing", "demo"]
+}

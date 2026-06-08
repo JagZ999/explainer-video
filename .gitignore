@@ -1,0 +1,21 @@
+# secrets
+.env
+*.key
+
+# render intermediates (can be hundreds of MB)
+frames/
+**/frames/
+*.aiff
+
+# large generated media outputs (regenerate from the skill)
+*.mp4
+*.mov
+
+# node / python
+node_modules/
+package-lock.json
+__pycache__/
+*.pyc
+
+# os
+.DS_Store
