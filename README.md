@@ -12,7 +12,7 @@ The signature look: a dark, modern UI mockup the "camera" **zooms and pans** acr
 
 | Intro | Five primitives (3D lift) | Decrypt | Mirror proof |
 |:---:|:---:|:---:|:---:|
-| ![](docs/01-intro.jpg) | ![](docs/02-cards.jpg) | ![](docs/03-decrypt.jpg) | ![](docs/04-proof.jpg) |
+| ![](docs/02-cards.jpg) | ![](docs/03-decrypt.jpg) | ![](docs/04-proof.jpg) |
 
 > Example output: a 2K, ~2:40 explainer for *Mirror Security* — voiceover + background music + time-synced sound effects.
 
@@ -70,9 +70,6 @@ skills/explainer-video/
   scripts/             render.js (2K logical-time render), elevenlabs.py, build_sfx.py
   reference/           ARCHITECTURE.md, ELEVENLABS.md
 ```
-
-## Before you publish
-Edit `author` / `owner` ("JagZ") in `.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json`, and replace `JagZ` above. See [`PUBLISHING.md`](PUBLISHING.md) for first-time GitHub steps.
 
 ## License
 MIT — see [`LICENSE`](LICENSE).
