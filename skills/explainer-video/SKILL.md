@@ -78,5 +78,12 @@ Summarize deliverables and offer tweaks (voice, pacing, colors, a specific effec
 - `scripts/render.js` — native-resolution, logical-time-synced renderer (Chrome screencast → frames + timing).
 - `scripts/elevenlabs.py` — ElevenLabs helpers: TTS-with-timestamps, music, SFX palette.
 - `scripts/build_sfx.py` — places SFX clips on a timeline → one synced SFX track.
-- `reference/ARCHITECTURE.md` — how the scene/camera/cue/morph engine and the render+sync pipeline work (read before editing the engine).
+- `scripts/analyze_motion.py` — detect zoom/transition timestamps in a rendered (or user-trimmed) MP4 via frame-difference. Use when scene-detect fails on crossfades.
+- `scripts/build_events.py` — turn detected motion into `music_accents.json` + `sfx_events.json` (drops/whooshes synced to the real video).
+- `scripts/seed_capture_profile.sh` — seed a clean Chrome profile (`.capdir`) with the user's auth, for reliable headless capture.
+- `scripts/capture.js` — puppeteer capture toolkit (clean profile, pipe transport, real clicks, keyboard typing, patient login) → crisp 2x screenshots of the real product.
+- `reference/CAPTURE_REAL_DASHBOARD.md` — the real-dashboard capture workflow (when you want to show the actual product, not a recreation).
+- `reference/ARCHITECTURE.md` — scene/camera/cue/morph engine, render+sync pipeline, 3D card-rise & button-press on real screenshots, and the two production modes (stylized vs real screenshots).
+- `reference/AUDIO_SYNC.md` — how to sync music drops & SFX, incl. the motion-difference method for videos the user has trimmed/edited.
+- `reference/PITFALLS.md` — hard-won gotchas (pkill self-kill, background-node logging, puppeteer real-profile timeout, custom-combobox clicks, scene-detect-fails-on-crossfade, music length cap).
 - `reference/ELEVENLABS.md` — endpoints, models, voices, gotchas.

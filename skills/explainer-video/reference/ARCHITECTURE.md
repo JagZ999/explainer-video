@@ -54,3 +54,36 @@ ffmpeg -f concat -safe 0 -i list.txt -i vo_full.mp3 \
   -c:a aac -b:a 160k -shortest -movflags +faststart out.mp4
 ```
 Verify sync by extracting frames at scene boundaries with `-ss AFTER -i` (frame-accurate) and confirming the visual matches the spoken word. Delete `frames/` afterward (can be hundreds of MB).
+
+## 3D card-rise & button-press on REAL screenshots
+When a scene is a real screenshot (not the SVG mockup), you can still get the signature
+"element lifts as it's named" and "button presses itself" effects by overlaying *crops of
+the same screenshot*:
+
+- **Card-rise:** for a card at fractional rect `{x,y,w,h}`, make an absolutely-positioned
+  div over that rect whose background is the screenshot, cropped to the card:
+  `background-size: (100/w)% (100/h)%; background-position: (x/(1-w)*100)% (y/(1-h)*100)%`.
+  Flat, it sits pixel-identical over the base (invisible). To lift it, use a **self-perspective**
+  transform so no ancestor `perspective` is needed:
+  `transform: perspective(900px) translateY(-2.4%) translateZ(34px) rotateX(7deg) scale(1.045)`
+  plus a drop shadow + violet outline. Dim the base layer (~0.45) while a card is raised so the
+  lifted crop pops and the duplicate underneath reads as "below".
+- **Stepped sequence:** when narration names several items in one card, lift each crop for a
+  short window with staggered `at` times (they rise & fall like steps).
+- **Angled fast scroll:** to fly through a long catalog (32 guardrails, all frameworks…),
+  zoom in and apply a slight `rotateX` to the scrolling list while translating it quickly —
+  "cards moving fast, seen from an angle".
+- **Button press (subtle):** crop the button rect and briefly apply
+  `transform: scale(.93) translateY(.6%)` + faint glow for ~0.2s, then release, then dissolve
+  to the "after" screenshot. Keep it subtle — a big 3D button bounce reads as gimmicky
+  (user feedback). Pair with the click choreography: zoom to the button → press → zoom out to
+  the result that changed.
+
+## Two production modes
+1. **Stylized recreation** (default): rebuild the UI in HTML/CSS from `example-explainer.html`.
+   Fully animatable (3D lifts, ciphertext morph, typed prompts). Best when you want polish and
+   control. If screens look empty, increase font sizes and fill with real content/elements
+   rather than zooming so far in that context is lost.
+2. **Real screenshots**: capture the actual product (full-res, consistent theme), show each
+   screen full-frame with gentle zoom/pan + the crop-overlay lifts above. Most faithful ("show
+   the dashboard as it is"). Capture full states incl. before/after of interactive steps.
