@@ -22,6 +22,7 @@ The end-to-end `explainer-video` skill is the orchestrator. Its reusable techniq
 - **`explainer-video`** — interactive, end-to-end product explainer (design interview → HTML → render → audio).
 - **`smooth-render`** — render any HTML/CSS animation to a sharp, **non-choppy** MP4 (slow-clock + heartbeat logical-time capture); for glassy/blur/gradient/continuous-motion scenes that stutter when captured.
 - **`kinetic-typography`** — animated headlines: word-cascade reveals, a centered hero headline **pushed aside** as content slides in, top/bottom lines that slide out of the headline, and a **cracked-word** effect.
+- **`glass-cards`** — frosted **liquid-glass** panels on a dark animated background; a card **zooms forward** to demo then **falls back** as the next rises, with a gentle camera zoom-in/settle.
 - **`vo-sync`** — generate voiceover with **word timestamps** and compute scene durations + cue times so visuals **land on the spoken word** with a tight, gap-free timeline.
 - **`audio-stems`** — generate + place **separate** voiceover / music / SFX tracks on a known timeline (event-synced whooshes, typing, risers, dings…), with an optional ducked master.
 
@@ -72,6 +73,7 @@ skills/
   explainer-video/       end-to-end orchestrator (SKILL.md, assets/, scripts/, reference/)
   smooth-render/         scripts/render.js (slow-clock + heartbeat), assemble.js
   kinetic-typography/    assets/kinetic.css + kinetic.js (word-cascade, hero→push, crack)
+  glass-cards/           assets/glass.css + glass.js (liquid-glass cards, zoom-forward/fall-back, camera)
   vo-sync/               scripts/compute_timing.js, elevenlabs.py, reference/VO_SYNC.md
   audio-stems/           scripts/build_sfx.py, mix.sh, elevenlabs.py
 ```
