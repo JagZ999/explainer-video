@@ -17,6 +17,14 @@ The signature look: a dark, modern UI mockup the "camera" **zooms and pans** acr
 - A rendered **MP4** at your chosen resolution (up to 2K) with voiceover burned in
 - **Separate** background-music and sound-effects stems (drop onto your own timeline)
 
+## Skills in this plugin
+The end-to-end `explainer-video` skill is the orchestrator. Its reusable techniques are also split into **focused, individually-invocable skills** — install the plugin once and invoke whichever fits the task:
+- **`explainer-video`** — interactive, end-to-end product explainer (design interview → HTML → render → audio).
+- **`smooth-render`** — render any HTML/CSS animation to a sharp, **non-choppy** MP4 (slow-clock + heartbeat logical-time capture); for glassy/blur/gradient/continuous-motion scenes that stutter when captured.
+- **`kinetic-typography`** — animated headlines: word-cascade reveals, a centered hero headline **pushed aside** as content slides in, top/bottom lines that slide out of the headline, and a **cracked-word** effect.
+- **`vo-sync`** — generate voiceover with **word timestamps** and compute scene durations + cue times so visuals **land on the spoken word** with a tight, gap-free timeline.
+- **`audio-stems`** — generate + place **separate** voiceover / music / SFX tracks on a known timeline (event-synced whooshes, typing, risers, dings…), with an optional ducked master.
+
 ## Requirements
 - [Claude Code](https://claude.com/claude-code)
 - `ffmpeg`
@@ -58,13 +66,14 @@ See [`skills/explainer-video/reference/ARCHITECTURE.md`](skills/explainer-video/
 
 ## Repo layout
 ```
-.claude-plugin/        plugin + marketplace manifests
-commands/explainer.md  the /explainer slash command
-skills/explainer-video/
-  SKILL.md             the interactive workflow Claude follows
-  assets/              proven engine + worked example + example VO script
-  scripts/             render.js (2K logical-time render), elevenlabs.py, build_sfx.py
-  reference/           ARCHITECTURE.md, ELEVENLABS.md
+.claude-plugin/          plugin + marketplace manifests
+commands/explainer.md    the /explainer slash command
+skills/
+  explainer-video/       end-to-end orchestrator (SKILL.md, assets/, scripts/, reference/)
+  smooth-render/         scripts/render.js (slow-clock + heartbeat), assemble.js
+  kinetic-typography/    assets/kinetic.css + kinetic.js (word-cascade, hero→push, crack)
+  vo-sync/               scripts/compute_timing.js, elevenlabs.py, reference/VO_SYNC.md
+  audio-stems/           scripts/build_sfx.py, mix.sh, elevenlabs.py
 ```
 
 ## License

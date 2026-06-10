@@ -1,7 +1,7 @@
 {
   "name": "explainer-video",
-  "version": "1.0.0",
-  "description": "Create animated, camera-zooming product explainer videos with voiceover, music, and synced sound effects. Interactive: asks about design, scenes, and TTS provider, then builds an HTML explainer, renders it to MP4, and produces separate music & SFX stems.",
+  "version": "1.1.0",
+  "description": "Create animated, camera-zooming product explainer videos with voiceover, music, and synced sound effects. Interactive end-to-end skill, plus focused sub-skills: smooth-render (non-choppy HTML→MP4), kinetic-typography (animated headlines/cracked word), vo-sync (word-timestamp cue sync), and audio-stems (separate music/SFX/VO tracks).",
   "author": { "name": "JagZ" },
-  "keywords": ["explainer", "video", "animation", "voiceover", "elevenlabs", "marketing", "demo"]
+  "keywords": ["explainer", "video", "animation", "voiceover", "elevenlabs", "marketing", "demo", "kinetic-typography", "render", "sfx", "music", "sync"]
 }
