@@ -8,9 +8,17 @@ The signature look: a dark, modern UI mockup the "camera" **zooms and pans** acr
 
 ![Explainer Video demo](docs/demo.gif)
 
-*From a real build: a typed prompt → **Send** → the reply **decrypts in place** (ciphertext → plaintext) with live attestation.*
+*From a real build: a centered **hero headline** is pushed aside as **liquid-glass cards** slide in and one **zooms forward** to demo itself — kinetic typography + glassmorphism.*
 
-> Example output: a 2K, ~2:40 explainer for *SAAS Company* — voiceover + background music + time-synced sound effects.
+> Example output: a 2K AI-security product explainer — voiceover + background music + time-synced sound effects.
+
+### Gallery
+| | |
+|---|---|
+| ![Kinetic headline + cracked word](docs/shot-cracks.jpg) | ![32 guardrails grid](docs/shot-guardrails.jpg) |
+| *Word-cascade headline with a **cracked-word** effect, on liquid-glass cards* | *A card **zooms forward** out of the grid to run its check* |
+| ![Liquid-glass card zoomed forward](docs/shot-glass-card.jpg) | ![Compliance mapping](docs/shot-compliance.jpg) |
+| *Dark, opaque **glass panel** zoomed forward; the rest dim behind it* | *Camera-framed feature panel + auto-mapped compliance* |
 
 ## What you get
 - A self-contained animated **HTML** explainer (plays in any browser)
