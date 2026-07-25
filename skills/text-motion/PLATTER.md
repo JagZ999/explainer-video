@@ -1,0 +1,127 @@
+# The Motion Platter — named recipe catalog
+
+A menu of motion-graphics "moves" distilled from launch-reel / SaaS-promo references
+(Pinterest "2d motion graphics", "saas promotional video", Beyond Motion, Zelios, think3,
+MotionDesigners.Pro, Nadim Sheikh, Philipp, Behance). Each has a **name**, what it looks
+like, the **reference** it came from, and a **render-safe build** (works in the headless-Edge
+capture pipeline — see the blur rule at the bottom). Helpers live in `assets/textmotion.js`;
+classes in `assets/textmotion.css`.
+
+> When the user asks for "the platter" or "a platter of skills," list these names grouped by
+> family with the one-line look, and offer to wire any subset into their piece.
+
+---
+
+## A · Text entrances
+| # | Name | Looks like | Build | Ref |
+|---|---|---|---|---|
+| A1 | **Word-Rise** | words fade + rise, staggered | `tmSplit`+`tmReveal` | baseline |
+| A2 | **Keyword Sweep** | a light bar sweeps behind the key word, which stays lit | `.tm-kw`+`tmSweep` | "highlight what matters" |
+| A3 | **Gradient Hero** | one big word filled with a color gradient | `.tm-grad` | "Using true", "superpowers" |
+| A4 | **Scramble-Decode** | text resolves out of random glyphs | `tmScramble` | cipher reels |
+| A5 | **Ticker-Roll** | one slot cycles synonyms vertically | `.tm-ticker`+`tmTicker` | single-word hero swap |
+| A6 | **Punch** | word scale-pops in | `.tm-punch`+`tmPunch` | accent beats |
+| A7 | **Motion-Blur Slide** ✳ | word streaks in with directional blur, snaps sharp | `.tm-blurin`+`tmBlurIn` | "Meet", "rebuilt" |
+| A8 | **Mixed-Type Line** ✳ | one sentence, each word a different font/weight/style | `.tm-mix` wrappers | "So we rebuilt it." |
+| A9 | **Bold-Key** ✳ | plain line, the key word simply heavier/brighter | `.tm-boldkey` | "Content **marketing**" |
+| A10 | **Serif Statement** ✳ | elegant italic-serif single words, slow holds | `.tm-serif` | "rebuilt." |
+
+## B · Backgrounds & gradients
+| # | Name | Looks like | Build | Ref |
+|---|---|---|---|---|
+| B1 | **Color-Arc + Blobs** | palette shifts per scene; soft blobs drift | `.tm-gradbg`+`tmGrad`+`tmDrift` | mesh/radial reels |
+| B2 | **Mesh Wash** ✳ | a soft colored light-sweep glides across frame | `.tm-mesh`+`tmMesh` | "superpowers", "Using true" |
+| B3 | **Blueprint Grid** | faint technical line grid | `.tm-grid` | "Introducing" |
+| B4 | **Dot Matrix** ✳ | faint dotted grid field | `.tm-dots` | "Create New Agent" |
+| B5 | **Neon Path + Travellers** ✳ | glowing curved lines with light-dots running along them | `.tm-path`+`tmTravel` | Philipp "Idea" |
+
+## C · Shapes, orbs & particles
+| # | Name | Looks like | Build | Ref |
+|---|---|---|---|---|
+| C1 | **Ring Ripples** | concentric rings expand outward | `.tm-rings`+`mkRings` | "AI SaaS Animation" |
+| C2 | **Floating Rings (Bokeh)** ✳ | outlined circles drift at varied depth, some soft | `.tm-bokeh`+`tmBokeh` | "Content marketing", "Be authentic" |
+| C3 | **Orb Bloom** ✳ | a bright ring blooms into a big soft glow orb | `.tm-orb`+`tmOrb` | "Be authentic" |
+| C4 | **Converge** ✳ | scattered circles drift inward to a focal point | `tmConverge` | "Be authentic" |
+| C5 | **Metaball Merge** ✳ | two circles stretch & fuse into a capsule | `.tm-meta`+`tmMeta` | think3 "Circles in motion" |
+| C6 | **Gooey Blobs** ✳ | solid rounded shapes morph & drift | `.tm-goo` | "Visa" blobs |
+| C7 | **Sparkle Burst** ✳ | a 4-point star twinkles/pops | `.tm-spark` | "Idea", "Give your users a place" |
+
+## D · Glass & UI accents
+| # | Name | Looks like | Build | Ref |
+|---|---|---|---|---|
+| D1 | **Glass Pill** | frosted status / CTA pill | `.tm-pill` | "Let's go" pill |
+| D2 | **Glass Prompt-Card** | frosted input/answer card | `.tm-card` | prompt card |
+| D3 | **Live Cursor** | oversized pointer glides & clicks | `tmCursor` | collab cursors |
+| D4 | **Glass Card Float** ✳ | frosted product card tilts with parallax | `.tm-float`+`tmFloat` | "Visa" (see `glass-cards` skill) |
+| D5 | **Focus-Glow Button** ✳ | glow blooms around a CTA on cue | `.tm-cta` | "Create New Agent" |
+| D6 | **Radar CTA** ✳ | concentric rings emanate behind a center button | `.tm-radar` | "Get Started for free" |
+
+## E · Product & composition
+| # | Name | Looks like | Build | Ref |
+|---|---|---|---|---|
+| E1 | **Integrations Orbit** ✳ | app icons ring a center hub + connect | `.tm-orbit`+`tmOrbit` | integration-hub reel |
+| E2 | **Icon Constellation** ✳ | app-icon bubbles float/scatter in space | `tmOrbit(scatter)` | "Too many deals" |
+| E3 | **UI Screen Reveal** ✳ | a product screenshot rises/tilts in on a gradient | `.tm-screen` | "Good evening, …" |
+| E4 | **Avatar Chips** ✳ | person/logo chips slide in as social proof | `.tm-chips` | "Marketers" |
+| E5 | **Card-Stack Fan** ✳ | tilted cards fan out in perspective | `.tm-fan` | "Discover · Direction · Design" |
+
+## F · Scene transitions (explainer glue) ✳
+| # | Name | Looks like | Build | Ref |
+|---|---|---|---|---|
+| F1 | **Shape Wipe** | a solid shape sweeps across to swap scenes | `.tm-wipe` translate | explainer cuts |
+| F2 | **Iris Reveal** | next scene revealed through an expanding circle mask | `.tm-iris` (clip-path circle) | title cards |
+| F3 | **Mask Push** | outgoing slides out as a shape pushes incoming in | paired translate | UI walkthroughs |
+| F4 | **Match-Cut Morph** | a shape in scene A becomes an element of scene B | shared element, animate size/pos | premium cuts |
+| F5 | **Liquid Wipe** | an organic blob mask grows to swap scenes | `.tm-goo` as clip-path | "What a Story" |
+| F6 | **Dissolve-over-Gradient** | content cross-fades while the shared gradient persists | `.tm-sc` gating + `.tm-gradbg` | this film |
+
+## G · UI & data motion (product demos) ✳
+| # | Name | Looks like | Build | Ref |
+|---|---|---|---|---|
+| G1 | **Bar-Grow** | chart bars rise from baseline, staggered | `.tm-bar`+`--h` transition | dashboards |
+| G2 | **Line-Draw** | an SVG line/path draws on, area fills under | `.tm-draw` stroke-dashoffset | analytics reels |
+| G3 | **Counter-Tick** | a number rolls up to its value (odometer) | `tmCount` | metric callouts |
+| G4 | **Card Deal** | UI cards slide/stack into place in sequence | `.tm-deal`+stagger | app walkthroughs |
+| G5 | **Toggle Switch** | a pill/toggle slides between states | `.tm-toggle` | feature compares |
+| G6 | **Cursor Demo** | a cursor drives a real UI (click → state change) | `tmCursor`+state toggles | product demos |
+| G7 | **Notification Pop** | toast/badge pops in with a spring | `.tm-punch` variant | "you've got…" beats |
+
+## Extra background/element variants ✳
+- **B6 · Starfield Drift** — tiny dots twinkle + parallax (ref: "Alpha" crypto promo) → `.tm-stars`+`tmStars`.
+- **C8 · Line-Draw Icon** — an icon strokes itself on (`stroke-dashoffset`) → `.tm-draw`.
+- **C9 · Doodle Connector** ✳ — wobbly hand-drawn line links two elements (ref: Kitaabh collage) → `.tm-draw` on a hand-jittered path.
+- **G8 · Timeline Scrubber** ✳ — a horizontal date axis with a playhead sliding through years (ref: Kitaabh) → `.tm-timeline`+`tmScrub`.
+- **B7 · Texture Overlay** ✳ — a persistent grain / paper / halftone / paint-wash layer over the whole frame for a tactile, "designed" feel (ref: Zelios/Canny painterly showreel; collage halftone) → `.tm-grainwrap` (SVG fractal-noise, static — cheap) + `.tm-halftone` + optional slow-drifting soft color wash. Keep opacity low (.04–.12). *Grain is a static overlay so it's render-cheap; do NOT animate it with `filter`.*
+
+## H · Aesthetic presets (whole-scene looks, from the "What a Story" playlist) ✳
+These are *combinations* — a background + element + type recipe that reads as one style.
+| # | Name | The recipe | Ref |
+|---|---|---|---|
+| H1 | **Isometric UI** | UI planes on `rotateX(55deg) rotateZ(-45deg)`, layered + floating, soft long shadow; charts/cards animate on the plane | "Viable" #27 |
+| H2 | **Collage / Cutout** | flat color bg + photographic cutouts + torn-paper sticker badges + **doodle connectors** + halftone/paper texture + timeline | "Kitaabh" #72 |
+| H3 | **Apple-Minimalist** | huge negative space, ONE shape/word, slow elegant eases, mono/light type, near-black or near-white field | "Apple-Style" #94 |
+| H4 | **Crypto / Neon-Glow** | near-black bg + starfield/particles + neon-glow edges + a spinning 3D token/coin + grid horizon | "Alpha" #2, "Ultra.io" NFT drops |
+| H5 | **Dashboard Reveal** | a product UI window rises in (UI-Screen-Reveal) then its charts grow, counters tick, rows deal in | most SaaS explainers |
+
+*Playlist coverage:* both "What a Story" playlists (~99 + ~97, heavily overlapping — same studio/clients) sort into ~7 buckets — **2D SaaS explainer** (the majority: kinetic type + UI cards + gradients + transitions), **Dashboard/data-viz + infographic** (H5 + family G), **Isometric** (H1), **Collage** (H2), **Crypto/NFT neon** (H4), **Apple-minimalist abstract** (H3), and **3D** (H1/`.tm-spin3d`/`.tm-iso` cover 3D-lite). All are reproducible in-pipeline with families A–G + these presets.
+
+**Out of scope for the HTML/CSS render pipeline** (present in the playlists, but *not* achievable with this toolkit — flag to the user and use real footage / AE / a video model instead): **rigged 2D character animation**, **live-action footage**, and **true 3D scenes** (only 3D-lite via CSS transforms is in-pipeline).
+
+✳ = added in this pass (the rest already shipped in the skill).
+
+## Families at a glance (the "platter")
+**A** Text entrances · **B** Backgrounds & gradients · **C** Shapes/orbs/particles ·
+**D** Glass & UI accents · **E** Product & composition · **F** Scene transitions · **G** UI & data motion.
+~40 named moves. Ask for "the platter" to get this menu; ask for a family letter to get just those.
+
+---
+
+## Render-safety rule (applies to every recipe)
+Headless Edge software-rasterizes `filter:blur()` / `backdrop-filter:blur()` → capture drops to
+~5 fps. So every "soft/frosted/blurred" look here is faked **without** blur:
+- **Softness** → `radial-gradient` falloff (rings, orbs, bokeh) or low-opacity layers.
+- **Frosted glass** → semi-transparent gradient fill + 1px light border + inset top highlight (no backdrop-filter).
+- **Motion blur** → a short directional `text-shadow`/ghost smear that resolves to none (`tmBlurIn`), not `filter:blur`.
+- **Metaball goo** → two circles + a rounded connecting bar (no SVG `feGaussianBlur` goo filter).
+All time-driven helpers take **logical time `t`** and all CSS durations scale by `--R`, so motion
+stays correct under slow-clock capture.
