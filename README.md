@@ -28,6 +28,15 @@ The signature look: a dark, modern UI mockup the "camera" **zooms and pans** acr
 ## Skills in this plugin
 The end-to-end `explainer-video` skill is the orchestrator. Its reusable techniques are also split into **focused, individually-invocable skills** — install the plugin once and invoke whichever fits the task:
 - **`explainer-video`** — interactive, end-to-end product explainer (design interview → HTML → render → audio).
+- **`motion-graphics`** ⭐ — **the super-skill**: a named **platter of ~56 reusable motion moves** across 8 families (text, backgrounds & gradients, elements/particles, glass & UI, product/composition, scene transitions, UI & data motion, aesthetic presets), plus a drop-in `assets/motion.css` + `motion.js` library. Ask for **"the platter"** to get the whole menu. Distilled from launch-reel / SaaS-explainer references. The families below are its sub-skills:
+  - **`text-motion`** (A) — keyword glow-sweeps, gradient-fill hero words, scramble-decode, ticker-roll, motion-blur slide, mixed-type lines.
+  - **`backgrounds-gradients`** (B) — color-arc gradients + drifting blobs, mesh-wash, blueprint/dot grids, neon paths, starfield, grain/texture.
+  - **`element-motion`** (C) — ring ripples, floating bokeh rings, orb bloom, converge, metaball merge, gooey blobs, sparkle, line-draw.
+  - **`glass-cards`** (D) — frosted liquid-glass panels (below).
+  - **`product-motion`** (E) — integrations orbit, icon constellation, UI-screen reveal, avatar chips, card-stack fan.
+  - **`scene-transitions`** (F) — shape wipe, iris reveal, mask push, match-cut, liquid wipe, dissolve-over-gradient.
+  - **`ui-data-motion`** (G) — bar-grow, line-draw, counter-tick, card deal, toggle, cursor demo, notification pop, timeline scrubber.
+  - **`aesthetic-presets`** (H) — isometric, collage/cutout, Apple-minimalist, crypto/neon-glow, dashboard-reveal whole-scene looks.
 - **`smooth-render`** — render any HTML/CSS animation to a sharp, **non-choppy** MP4 (slow-clock + heartbeat logical-time capture); for glassy/blur/gradient/continuous-motion scenes that stutter when captured.
 - **`kinetic-typography`** — animated headlines: word-cascade reveals, a centered hero headline **pushed aside** as content slides in, top/bottom lines that slide out of the headline, and a **cracked-word** effect.
 - **`glass-cards`** — frosted **liquid-glass** panels on a dark animated background; a card **zooms forward** to demo then **falls back** as the next rises, with a gentle camera zoom-in/settle.
@@ -84,7 +93,16 @@ skills/
   glass-cards/           assets/glass.css + glass.js (liquid-glass cards, zoom-forward/fall-back, camera)
   vo-sync/               scripts/compute_timing.js, elevenlabs.py, reference/VO_SYNC.md
   audio-stems/           scripts/build_sfx.py, mix.sh, elevenlabs.py
+  motion-graphics/       ⭐ master — SKILL.md + PLATTER.md + assets/motion.css + motion.js (shared library)
+  text-motion/           (A) assets/textmotion.css + textmotion.js — text entrances & emphasis
+  backgrounds-gradients/ (B) living gradients, mesh-wash, grids, neon paths, starfield, texture
+  element-motion/        (C) rings, orbs, particles, metaball, gooey blobs, sparkle, line-draw
+  product-motion/        (E) integrations orbit, screen reveal, avatar chips, card fan
+  scene-transitions/     (F) shape/iris/mask/match-cut/liquid/dissolve
+  ui-data-motion/        (G) bar-grow, line-draw, counter, card-deal, toggle, timeline
+  aesthetic-presets/     (H) isometric, collage, minimalist, crypto-neon, dashboard
 ```
+(Families B–H share the master's `motion-graphics/assets/motion.{css,js}`; D = `glass-cards`.)
 
 ## License
 MIT — see [`LICENSE`](LICENSE).
