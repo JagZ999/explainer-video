@@ -125,3 +125,24 @@ Headless Edge software-rasterizes `filter:blur()` / `backdrop-filter:blur()` →
 - **Metaball goo** → two circles + a rounded connecting bar (no SVG `feGaussianBlur` goo filter).
 All time-driven helpers take **logical time `t`** and all CSS durations scale by `--R`, so motion
 stays correct under slow-clock capture.
+
+## A′ · Line dynamics (added from the ETF launch-cut build, Jul 2026)
+Whole-LINE behaviors — the line moves as one object, not word-by-word.
+| # | Name | Looks like | Build |
+|---|---|---|---|
+| A11 | **Stamp-Slam** | line slams in like an auditor's stamp (scale 1.55→1 + tilt) | `.tm-stamp`+`.hit` |
+| A12 | **Split-Converge** | two halves slide from opposite sides, meet with overshoot | `.tm-half.l/.r`+`.in` |
+| A13 | **CRT Flicker-On** | line boots like a terminal (two flickers, then solid) | `.tm-crt`+`.on` |
+| A14 | **Tracking-Breathe** | kicker settles from very wide letter-spacing | `.tm-breathe`+`.in` |
+| A15 | **Strike-Dismiss** | superseded line gets struck through + dims (pairs with cracked-word) | `.tm-dismiss`+`.struck` |
+| A16 | **Cipher-Slot** | ONE word in a stable sentence churns ciphertext then resolves | width-locked slot (see rule below) |
+| — | **Living text** | shimmer / breathe / word wave-bob / glow pulse / perpetual ticker keep text alive after entrances | `.tm-shimmer` `.tm-pulse` + JS bob |
+| — | **Camera Waypoints** | multi-target zoom choreography (terminal → dashboard → receipt) | waypoint array + easeIO lerp in camFor |
+
+## Production rules (paid for in re-renders — do not relearn)
+1. **Width-lock scramble slots.** Cipher glyphs vary in width → the whole sentence reflows every cycle and "the words move." Lock the slot to the EXACT resolved-word width, measured via a hidden clone appended to the heading (live-element measures can return 0 pre-layout; retry per-frame until >0; avoid unit-guess fallbacks — an oversized fallback = visible extra gaps around the word).
+2. **Motion-blur smear ≤ .15em.** Bigger text-shadow offsets read as DUPLICATE words at hero sizes, not blur.
+3. **One static stage background.** Never composite bright backgrounds inside the camera-transformed world — any pan/zoom can expose the world edge (black border). Put a single oversized static background UNDER the world; only elements ride the camera.
+4. **Neutral logo shadows.** Colored drop-shadows (purple/mint) around white lockups read as color bleed/fringing. Use dark neutral shadows on brand marks.
+5. **Transform states must carry positioning.** If an element is centered by `translateX(-50%)`, every animation state (including JS-set transforms like breathing) must include it, or the element jumps half-off-screen.
+6. **Cue words to the SFX events, not vice versa.** Read the sfx event JSON (tick times) and reveal each word exactly on its tick; a linear reveal window drifts ~0.3s off the sounds.

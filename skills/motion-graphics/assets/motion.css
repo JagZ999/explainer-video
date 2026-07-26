@@ -274,3 +274,37 @@ html.tm-paused .tm-rings i{animation-play-state:paused;} /* pause when idle to s
 .tm-timeline .tick{position:absolute;top:-.5em;font-family:var(--mono,monospace);font-size:.8em;transform:translateX(-50%);opacity:.5;}
 .tm-timeline .head{position:absolute;top:50%;width:.8em;height:.8em;border-radius:50%;background:var(--tm-accent);
   transform:translate(-50%,-50%);box-shadow:0 0 .8em var(--tm-accent);transition:left calc(.3s*var(--R)) linear;}
+
+/* ===================================================================
+   LAUNCH-CUT LINE DYNAMICS — added Jul 2026 from the ETF launch video
+   build (3 production iterations). Whole-LINE behaviors, not per-word.
+   =================================================================== */
+/* A11 · Stamp-Slam — line slams in like an auditor's stamp.
+   RULE: if the element is centered via transform, EVERY state must
+   include that translate or the line jumps half-off-screen. */
+.tm-stamp{opacity:0;transform:translateX(-50%) scale(1.55) rotate(-2deg);
+  transition:opacity calc(.16s*var(--R)) ease,transform calc(.38s*var(--R)) cubic-bezier(.25,1.4,.4,1);}
+.tm-stamp.hit{opacity:1;transform:translateX(-50%) scale(1) rotate(0deg);}
+/* A12 · Split-Converge — line halves meet in the middle with overshoot */
+.tm-half{display:inline-block;opacity:0;transition:opacity calc(.25s*var(--R)) ease,transform calc(.55s*var(--R)) cubic-bezier(.2,1.25,.3,1);}
+.tm-half.l{transform:translateX(-2.2em);} .tm-half.r{transform:translateX(2.2em);}
+.tm-half.in{opacity:1;transform:none;}
+/* A13 · CRT Flicker-On — line boots like a terminal */
+.tm-crt{opacity:0;}
+.tm-crt.on{animation:tm-crtflick calc(.55s*var(--R)) steps(1,end) both;}
+@keyframes tm-crtflick{0%{opacity:0;}18%{opacity:1;}28%{opacity:.15;}42%{opacity:1;}54%{opacity:.35;}68%{opacity:1;}100%{opacity:1;}}
+/* A14 · Tracking-Breathe — kicker settles from wide letter-spacing */
+.tm-breathe{opacity:0;letter-spacing:1.3em;text-indent:1.3em;
+  transition:opacity calc(.7s*var(--R)) ease,letter-spacing calc(1.2s*var(--R)) cubic-bezier(.2,.8,.25,1),text-indent calc(1.2s*var(--R)) cubic-bezier(.2,.8,.25,1);}
+.tm-breathe.in{opacity:1;letter-spacing:.52em;text-indent:.52em;}
+/* A15 · Strike-Dismiss — a superseded line is struck through + dimmed */
+.tm-dismiss{position:relative;transition:opacity calc(.5s*var(--R)) ease;}
+.tm-dismiss::after{content:"";position:absolute;left:6%;top:55%;height:.06em;width:0;border-radius:.03em;
+  background:linear-gradient(90deg,var(--tm-accent),var(--tm-accent2));
+  transition:width calc(.55s*var(--R)) cubic-bezier(.4,0,.2,1);}
+.tm-dismiss.struck{opacity:.55;} .tm-dismiss.struck::after{width:88%;}
+/* Living-text micro-motions — text should never sit dead on screen */
+.tm-shimmer{background-size:220% 100%;animation:tm-gshimmer calc(3.5s*var(--R)) linear infinite;}
+@keyframes tm-gshimmer{0%{background-position:0% 0;}100%{background-position:220% 0;}}
+@keyframes tm-glowpulse{0%,100%{text-shadow:0 0 .3em color-mix(in srgb,var(--tm-accent) 20%,transparent);}50%{text-shadow:0 0 .9em color-mix(in srgb,var(--tm-accent) 80%,transparent);}}
+.tm-pulse{animation:tm-glowpulse calc(2.6s*var(--R)) ease-in-out infinite;}

@@ -1,7 +1,32 @@
 {
   "name": "explainer-video",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Create animated, camera-zooming product explainer & launch videos with voiceover, music, and synced sound effects. Interactive end-to-end skill, plus the motion-graphics super-skill: a named platter of ~56 reusable motion moves across 8 families (text-motion, backgrounds-gradients, element-motion, glass-cards, product-motion, scene-transitions, ui-data-motion, aesthetic-presets) with a drop-in motion.css/motion.js library — plus smooth-render (non-choppy HTML→MP4), vo-sync (word-timestamp cue sync), and audio-stems (separate music/SFX/VO tracks).",
-  "author": { "name": "JagZ" },
-  "keywords": ["explainer", "video", "animation", "motion-graphics", "voiceover", "elevenlabs", "marketing", "demo", "launch-video", "kinetic-typography", "text-motion", "gradients", "glassmorphism", "liquid-glass", "transitions", "particles", "isometric", "data-viz", "render", "sfx", "music", "sync"]
+  "author": {
+    "name": "JagZ"
+  },
+  "keywords": [
+    "explainer",
+    "video",
+    "animation",
+    "motion-graphics",
+    "voiceover",
+    "elevenlabs",
+    "marketing",
+    "demo",
+    "launch-video",
+    "kinetic-typography",
+    "text-motion",
+    "gradients",
+    "glassmorphism",
+    "liquid-glass",
+    "transitions",
+    "particles",
+    "isometric",
+    "data-viz",
+    "render",
+    "sfx",
+    "music",
+    "sync"
+  ]
 }

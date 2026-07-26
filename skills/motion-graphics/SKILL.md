@@ -63,6 +63,14 @@ them and capture drops to ~5 fps. Every "soft / frosted / motion-blurred" look i
 faked without blur (radial-gradient falloff, translucent gradient + inset highlight, directional
 text-shadow smear, two-circles-plus-bridge instead of an SVG goo filter). See PLATTER.md's footer.
 
+
+## Production rules (from shipping a real launch video — see PLATTER.md for the full list)
+Beyond the blur rule: **width-lock scramble slots** (glyph width jitter reflows the line);
+**smear ≤ .15em** (bigger reads as duplicate words); **one static stage background** (backgrounds
+inside a camera-transformed world expose black borders on pan/zoom); **neutral shadows on brand
+marks** (colored drop-shadows read as bleed); **every transform state carries its positioning
+translate**; **cue word reveals to the SFX event times**, not to a linear window.
+
 ## Composes with (focused sibling skills)
 - **text-motion** — the deep dive on family A (this super-skill's assets are the shared library).
 - **kinetic-typography** — word-cascade + hero-push staging.
